@@ -1,0 +1,176 @@
+
+.App{
+  margin: 0%;
+  display: inline;
+}
+
+.rootbox{
+  width: 70%;
+  display: inline-block;
+}
+
+.leftbox {
+  display: inline-block;
+  border: 2px solid black;
+  height: 100%;
+  width: 25%;
+  margin-left: 0px;
+  padding-left: 20px;
+  border-left: 0px;
+  border-top: 3px solid rgb(103, 20, 180);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  vertical-align: top;
+}
+
+.leftbox h2 {
+    margin-top: 0px;
+    font-size: 40px;
+  }
+
+.leftbox .secondh2 {
+  margin-top: 0px;
+}
+
+
+.leftbox h3 {
+  margin-top: 3px;
+  font-size: 25px;
+}
+
+
+.greenbutton {
+  width: 80%;
+  height: 50px;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  border: 1.2px solid black;
+  font-size: 24px;
+  background-color: rgb(77, 119, 77);
+}
+
+.redbutton {
+  width: 80%;
+  height: 50px;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  border: 1.2px solid black;
+  font-size: 24px;
+  background-color: rgb(238, 75, 75);
+}
+
+.yellowbutton {
+  width: 80%;
+  height: 50px;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  border: 1.2px solid black;
+  font-size: 24px;
+  background-color: rgb(235, 235, 90)
+}
+
+ .greenbutton:hover {
+   
+  background-color: rgb(99, 145, 99);
+  cursor: pointer;
+}
+
+  .redbutton:hover {
+    background-color: rgb(230, 105, 105);
+    cursor: pointer;
+  }
+
+  .yellowbutton:hover {
+    background-color: rgb(233, 233, 21);
+    cursor: pointer;
+  }
+
+
+.rightbox {
+  text-align: center;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding-left: 20px;
+  border-left: 0px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 25px;
+}
+
+.addnew{
+  text-align: center;
+  display: inline-block;
+  height: 600px;
+  width: 60%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 25px;
+  padding-left: 150px;
+  padding-right: 200px;
+}
+
+.addnew input{
+  margin-top: 15px;
+  padding: 15px;
+  width: 600px;
+  font-size: 22px;
+  border: 2px solid blue;
+}
+
+.addnew .textarea{
+  padding-bottom: 100px;
+  
+}
+
+.addnew button {
+  margin-top: 15px;
+  width: 300px;
+}
+
+.recipe {
+  margin-left: 50px;
+  width: 800px;
+  height: 100%;
+  background-color: rgb(194, 221, 154);
+  border-radius: 5px;
+  margin-top:10px;
+  padding: 5px;
+  padding-left: 15px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 15px;
+  
+}
+.recipepage h3{
+  display: inline-block;
+  margin-bottom: 0px;
+}
+
+.recipepage .edit {
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    margin-left: 400px;
+    margin-right: 10px;
+    vertical-align: top;
+    margin-top: 10px;
+    border: 1px solid black;
+    background-color: rgb(48, 176, 219);
+
+}
+
+.recipepage .delete {
+  display: inline-block;
+  width: 150px;
+  height: 30px;
+  vertical-align: top;
+  margin-top: 10px;
+  border: 1px solid black;
+  background-color: rgb(224, 65, 65);
+}
+
+.recipepage .edit:hover {
+  cursor: pointer;
+  background-color: rgb(5, 163, 216);
+}
+.recipepage .delete:hover {
+  cursor: pointer;
+  background-color: rgb(224, 38, 38);
+}
