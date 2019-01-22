@@ -8,7 +8,7 @@ const Addnew = (props) => {
             <br></br>
             <input onChange={props.addingredient} className={styles.textarea} type="textarea" placeholder="Ingredients"></input>
             <br></br>
-            <button className={styles.greenbutton} onClick={props.submit} >Summit Recipe</button>
+            <button className={styles.greenbutton} onClick={props.submit} >Submit Recipe</button>
             <br></br>
             <button className={styles.redbutton} onClick = {props.cancel}>Cancel</button>
         </div>    
