@@ -2,25 +2,27 @@ import React, {Component} from 'react';
 import styles from '../App.module.css';
 
 
-export const EditPage = () => {
-    
-    return (
-        <div className={styles.editpage}>
-        <p>Edit Title</p>
-        <input className={styles.nameedit} type='text'></input>
-        <p>Edit Ingredients</p>
-        <textarea className={styles.ingedit} type='textarea'></textarea>
-        <br></br>
-        <button className={styles.btnsumbitedit}>Submit Edit</button>
-        <button className={styles.btncanceledit}>Cancel</button>
-        
-    </div>
-    )
+ class EditPage extends Component {
+    render(props) {
+        return (
+            <div className={styles.editpage}>
+            <p>Edit Title</p>
+            <input className={styles.nameedit} onChange={this.props.editName}
+             defaultValue={this.props.editNameValue} type='text'></input>
+            <p>Edit Ingredients</p>
+            <textarea className={styles.ingedit} onChange={this.props.editIngredient} 
+            defaultValue = {this.props.editIngredientValue}
+            type='textarea'></textarea>
+            <br></br>
+            <button className={styles.btnsumbitedit} onClick={this.props.submit}>Submit Edit</button>
+            <button className={styles.btncanceledit}>Cancel</button>
+        </div>
+        )
+    }
 }
 
-class ShowRecipe extends Component {
+export class ShowRecipe extends Component {
     
-
     render(props) {
         return (
             <div className={styles.recipe}>
@@ -39,4 +41,4 @@ class ShowRecipe extends Component {
 }
 
 
-export default ShowRecipe;
+export default EditPage;
