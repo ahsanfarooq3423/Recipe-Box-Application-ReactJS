@@ -1,25 +1,11 @@
 import React, { Component } from 'react';
 import styles from './App.module.css';
-import Addnew from './Recipe/Addnew.js';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-import { ShowRecipe } from './Recipe/Showrecipe';
-import EditPage from './Recipe/Showrecipe';
+import Addnew from '../Components/Recipe/Addnew.js';
+import { ShowRecipe } from '../Components/Recipe/Showrecipe';
+import EditPage from '../Components/Recipe/EditPage';
+import Title from '../Components/Cockpit/Title';
+import Leftbox from '../Components/Boxes/Leftbox';
 
-
-
-const Title = () => {
-      return(
-        <div className={styles.rightbox}>
-          <h1>This is a Recipe App</h1>
-          <h2>You can record your recipe here</h2>
-          <p>All your recipes are stored in your browser's local storage 
-              and any changes you make will remain saved as long 
-              as you continue to access this page from the same browser.</p>
-          
-    </div>
-      )     
-}
 
 class App extends Component {
   state = {
@@ -162,7 +148,7 @@ class App extends Component {
         }
         else {
           return ( 
-                <ShowRecipe name = {recipe.name}
+          <ShowRecipe name = {recipe.name}
           ing= {recipe.ingredient}
           index={index}
           editflag = {this.state.recipes[index].edit}
@@ -182,45 +168,23 @@ class App extends Component {
       })
     }
 
-   
-
     return (
       <div className={styles.App}>
-        
-     
-        
-        <div className={styles.leftbox} rightboxstate = {this.state.rightboxstate} >
-            <div><FontAwesomeIcon icon={faCoffee} size = "3x"/></div>
-            <div><h2>Recipe Box Application</h2></div>
-            
-            <button className = {styles.greenbutton} onClick={this.addnewState} >Add a New Recipe</button>
-            <br></br>
-            <button className = {styles.greenbutton} onClick={this.showAllRecipesHandler}>Show All Recipies</button>
-            <br></br>
-            <button className={styles.redbutton} onClick={this.removeRecipeHandler} >Remove All Recipies</button>
-            <br></br>
-            <h3>The List {this.state.empty}</h3>
-            {
-                 this.state.recipes.map((recipe,index) => {
-                   if (recipe.name === ""){
-                     return null;
-                   }
-                   else {
-                    return <span>
-                    <button className = {styles.yellowbutton}
-                     onClick={() => this.showRecipeHandler(index)}>{recipe.name}</button>
-                    <br></br>
-                  </span>
-                   }
-                })
-            }
-        </div>
-        
+        <Leftbox 
+        rightboxstate = {this.state.rightboxstate}
+        addnewState = {this.addnewState}
+        showAllRecipesHandler = {this.showAllRecipesHandler}
+        removeRecipeHandler = {this.removeRecipeHandler}
+        empty = {this.state.empty}
+        recipes = {this.state.recipes}
+        showRecipeHandler = {this.showRecipeHandler}
+        />
         <div class={styles.rootbox}>
              { content } 
         </div>
         
       </div>
+
     );
   }
 }
